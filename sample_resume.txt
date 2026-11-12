@@ -1,0 +1,20 @@
+SAMPLE RESUME
+
+Name: Alex Kumar
+Email: alex.kumar@example.com
+Phone: +91 9876543210
+
+CAREER OBJECTIVE
+Computer Science student seeking an internship to apply programming and problem-solving skills.
+
+EDUCATION
+B.Tech in Computer Science and Engineering
+
+SKILLS
+Python, SQL, HTML, CSS, JavaScript, Git, Flask, API basics, problem solving
+
+PROJECTS
+Student Management System - Developed a simple application to manage student records.
+
+EXPERIENCE
+Completed a college-level software development internship.
