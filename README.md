@@ -1,64 +1,227 @@
-# AI Resume Analyzer (Minor Project)
+# AI Resume Analyzer
 
-A beginner-friendly Python web application that reads a resume and produces a role-based skill match report, a simple score, a section checklist, and improvement suggestions.
+An AI Resume Analyzer built using Python and Streamlit that evaluates resumes against selected job roles and generates a role-based skill matching report. It extracts resume content, calculates a skill match score, identifies missing skills, checks important resume sections, and provides suggestions for improvement.
 
 ## Features
-- Upload a PDF, DOCX, or TXT resume.
-- Select a target role.
-- Extract resume text locally.
-- Compare resume text with a small role-based skill list.
-- Show a match score, missing skills, section checklist, and suggestions.
-- Download the analysis as a TXT file.
 
-## Requirements
+- **Resume Upload:** Upload resumes in PDF, DOCX, and TXT formats.
+- **Role Selection:** Choose a target job role for resume evaluation.
+- **Text Extraction:** Extract text from uploaded resumes.
+- **Skill Matching:** Compare resume skills against predefined job-role requirements.
+- **Match Score:** Generate a simple percentage-based skill matching score.
+- **Missing Skills:** Identify skills that are missing from the resume.
+- **Resume Section Checklist:** Check important resume sections.
+- **Improvement Suggestions:** Provide suggestions to improve the resume.
+- **Download Report:** Download the generated analysis as a TXT file.
+
+## Technology Stack
+
+| Component | Technology |
+|---|---|
+| Programming Language | Python |
+| Frontend / Web Framework | Streamlit |
+| PDF Processing | PyPDF |
+| DOCX Processing | python-docx |
+| Data Processing | Python |
+| Version Control | Git and GitHub |
+| Development Environment | Visual Studio Code |
+
+## Project Structure
+
+```text
+AI_Resume_Analyzer/
+│
+├── app.py                 # Main Streamlit application
+├── requirements.txt       # Python dependencies
+├── README.md              # Project documentation
+├── .gitignore             # Files excluded from Git
+├── sample_resume.txt      # Sample resume for testing
+│
+└── venv/                  # Local virtual environment (not uploaded)
+```
+
+## Prerequisites
+
+Before running the project, make sure you have installed:
+
 - Python 3.9 or newer
-- Internet connection for the first-time package installation
+- pip (Python package installer)
+- Git
+- Visual Studio Code (recommended)
+- A web browser
+- Internet connection for installing dependencies
 
-## Run on Windows
-1. Extract the ZIP file.
-2. Open the extracted `AI_Resume_Analyzer` folder.
-3. Open Command Prompt or PowerShell in that folder.
-4. Create a virtual environment:
+### Step 1: Clone the Repository
 
-   ```bash
-   py -m venv venv
-   ```
+Open your terminal and execute:
 
-5. Activate it:
-
-   ```bash
-   venv\Scripts\activate
-   ```
-
-6. Install packages:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-7. Start the application:
-
-   ```bash
-   streamlit run app.py
-   ```
-
-8. The app will open in your browser. If it does not, open the local URL shown in the terminal (usually `http://localhost:8501`).
-
-## Run on macOS / Linux
 ```bash
-python3 -m venv venv
+git clone https://github.com/Praneeth3105/AI_Resume_Analyzer.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd AI_Resume_Analyzer
+```
+
+### Step 2: Create a Virtual Environment
+
+Create an isolated Python environment:
+
+```bash
+python -m venv venv
+```
+
+On Windows, you can also use:
+
+```bash
+py -m venv venv
+```
+
+### Step 3: Activate the Virtual Environment
+
+**Windows – Command Prompt:**
+
+```bash
+venv\Scripts\activate.bat
+```
+
+**Windows – PowerShell:**
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+**Windows – Git Bash:**
+
+```bash
+source venv/Scripts/activate
+```
+
+**macOS / Linux:**
+
+```bash
 source venv/bin/activate
+```
+
+After activation, you should see `(venv)` in your terminal.
+
+### Step 4: Upgrade pip
+
+Run the following command:
+
+```bash
+python -m pip install --upgrade pip
+```
+
+### Step 5: Install Dependencies
+
+Install all the required Python packages:
+
+```bash
 pip install -r requirements.txt
+```
+
+### Step 6: Run the Application
+
+Start the Streamlit application:
+
+```bash
 streamlit run app.py
 ```
 
-## Test it
-Upload the included `sample_resume.txt` file and select `Python Developer` or `General Software Intern`.
+The application will open automatically in your default browser.
 
-## Important project note
-This is an educational, rule-based prototype. The score is a simple keyword match against the built-in skill list; it is not a professional hiring score and does not use a live LLM. You can later extend it with Prompt Engineering and an LLM API if your guide requires a genuine generative-AI integration.
+If it does not open automatically, visit:
 
-## Main files
-- `app.py` — complete application code
-- `requirements.txt` — Python dependencies
-- `sample_resume.txt` — sample file for testing
+```text
+http://localhost:8501
+```
+
+## How to Use the Application
+
+1. Open the AI Resume Analyzer application.
+2. Upload your resume in PDF, DOCX, or TXT format.
+3. Select your desired job role.
+4. Submit the resume for analysis.
+5. View the generated skill matching score.
+6. Review the matched and missing skills.
+7. Check the resume section checklist.
+8. Read the improvement suggestions.
+9. Download the analysis report as a TXT file.
+
+## Testing
+
+A sample resume file named `sample_resume.txt` is included in the repository.
+
+You can upload this file to test the application.
+
+Suggested target roles:
+
+- Python Developer
+- General Software Intern
+
+## Troubleshooting
+
+**1. Python is not recognized**
+
+Install Python and make sure you select the option to add Python to PATH during installation.
+
+**2. Streamlit command not found**
+
+Activate the virtual environment and install the dependencies again:
+
+```bash
+pip install -r requirements.txt
+```
+
+**3. ModuleNotFoundError**
+
+Install the missing package or reinstall all dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+**4. Application does not open**
+
+Run the following command and open the local URL displayed in the terminal:
+
+```bash
+streamlit run app.py
+```
+
+**5. Virtual environment activation error in PowerShell**
+
+If PowerShell blocks activation, use Command Prompt or Git Bash activation instructions instead.
+
+## Important Project Note
+
+This project is an educational, rule-based prototype. Its skill matching score is calculated using predefined keywords and job-role skill lists. It does not represent an official recruitment score and does not currently use a live Large Language Model (LLM).
+
+The project can be extended in the future with Natural Language Processing, Prompt Engineering, and LLM API integration for more advanced resume evaluation.
+
+## Future Enhancements
+
+- Integration with Large Language Models (LLMs).
+- Advanced Natural Language Processing.
+- Job description-based resume matching.
+- ATS-friendly resume evaluation.
+- Personalized resume improvement recommendations.
+- Additional job roles and skill categories.
+
+## Author
+
+**Muvvala Durga Praneeth**
+
+GitHub: https://github.com/Praneeth3105
+
+Portfolio: https://portfolio-praneeth.onrender.com/
+
+---
+
+**Project:** AI Resume Analyzer  
+**Project Type:** Minor Project  
+**Programming Language:** Python  
+**Framework:** Streamlit
