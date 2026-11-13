@@ -211,17 +211,4 @@ The project can be extended in the future with Natural Language Processing, Prom
 - Personalized resume improvement recommendations.
 - Additional job roles and skill categories.
 
-## Author
-
-**Muvvala Durga Praneeth**
-
-GitHub: https://github.com/Praneeth3105
-
-Portfolio: https://portfolio-praneeth.onrender.com/
-
 ---
-
-**Project:** AI Resume Analyzer  
-**Project Type:** Minor Project  
-**Programming Language:** Python  
-**Framework:** Streamlit
