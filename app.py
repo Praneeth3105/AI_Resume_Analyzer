@@ -13,7 +13,6 @@ ROLE_SKILLS = {
     "General Software Intern": ["python", "java", "c++", "sql", "html", "css", "javascript", "git"]
 }
 
-
 def extract_text(uploaded_file):
     name = uploaded_file.name.lower()
     if name.endswith(".txt"):
