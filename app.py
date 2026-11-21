@@ -25,7 +25,6 @@ def extract_text(uploaded_file):
         return "\n".join(p.text for p in doc.paragraphs)
     return ""
 
-
 def analyze_resume(text, role):
     normalized = re.sub(r"\s+", " ", text.lower())
     skills = ROLE_SKILLS[role]
