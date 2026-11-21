@@ -39,6 +39,7 @@ def analyze_resume(text, role):
         "Projects section": "project" in normalized,
         "Experience section": "experience" in normalized or "internship" in normalized,
     }
+    
     suggestions = []
     if not sections["Email address"]: suggestions.append("Add a professional email address.")
     if not sections["Phone number"]: suggestions.append("Add a contact phone number.")
